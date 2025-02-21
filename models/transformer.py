@@ -59,7 +59,7 @@ class Transformer(nn.Module):
         res_layer = TransformerResLayer(d_model, nhead, dim_feedforward, dropout, activation, normalize_before)
         resloter_norm = nn.LayerNorm(d_model)
         self.resloter = TransformerDecoder(
-            res_layer, 3, resloter_norm, return_intermediate=return_intermediate_dec
+            res_layer, 6, resloter_norm, return_intermediate=return_intermediate_dec
         )
 
         # 对模型参数进行初始化
